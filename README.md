@@ -1,6 +1,11 @@
 # MOPA_Laser_Diffraction_Gratings
 Machine settings, photos of material test swatches, and code to generate diffraction patterns on stainless steel with a MOPA fiber laser
 
+I used a Cloudray GM100 MOPA laser engraver with 290mm focal length F-theta lens :  https://www.cloudraylaser.com/products/cloudray-gm-100-litemarker-100w-fiber-laser-marking-engraver-with-4-3-x-4-3-scan-area?variant=43545779830945
+![GM100](GM100.png)
+
+
+
 
 
 Optimize travel speed and frequency for 60ns pulse .045mm line spacing and 19.6% power.
@@ -11,6 +16,16 @@ Optimize travel speed and frequency for 60ns pulse .06mm line spacing and 19.6% 
 
 Optimize travel speed and frequency for 45ns pulse .06mm line spacing and 19.6% power.
 ![Frequency vs Speed .06mm  45ns  19.6pct power](freq_vs_speed_0.06mm_45ns_19.6pct.jpg)
+
+
+![JPT M7 specs](JPT_m7_laser_specs.jpg)
+
+![JPT M7 pulse widths](JPT_m7_pulse_widths.jpg)
+
+![Laser pulse waveform](Laser_pulse_waveform.jpg)
+
+
+
 
 
 
