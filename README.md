@@ -1,14 +1,17 @@
 # MOPA_Laser_Diffraction_Gratings
-Machine settings, photos of material test swatches, and code to generate diffraction patterns on stainless steel with a MOPA fiber laser
+Machine settings, photos of material test swatches, and code to generate diffraction patterns on stainless steel with a MOPA fiber laser.  By moving the laser spot at 300mm/s, and pulsing at 300KHz, it is possible to make a diffractive pattern with 1 micron pitch on stainless steel sheets.  The grating direction is formed perpendicularly to the direction of laser travel.
 
 ![Animated GIF of patterns](diffraction_animation.gif)
-
-
 
 I used a Cloudray GM100 MOPA laser engraver with 290mm focal length F-theta lens :  https://www.cloudraylaser.com/products/cloudray-gm-100-litemarker-100w-fiber-laser-marking-engraver-with-4-3-x-4-3-scan-area?variant=43545779830945
 ![GM100](GM100.png)
 
-All substrates are polished stainless steel. .048"  (1.2mm) is great because it doesn't warp much at all.  .036" (0.9mm) is acceptable, but thinner metal has a lot of problems with warping.   https://www.mcmaster.com/9785K12/   https://www.mcmaster.com/9785K13/   
+The easiest way to get started making your own designs in [Lightburn](https://lightburnsoftware.com/):  Import an svg file, and Use the "fill" or "offset fill", 300 mm/s,  300KHz,  19% power,  60ns pulse width, .05mm line interval.
+
+All substrates are polished stainless steel. .048"  (1.2mm) is great because it doesn't warp much.  .036" (0.9mm) is acceptable, but thinner metal has a lot of problems with warping.   https://www.mcmaster.com/9785K12/   https://www.mcmaster.com/9785K13/     I used a vacuum chuck to hold the sheet metal flat while engraving:  https://www.ebay.com/itm/276754053418  https://www.clampusystems.com/product-category/vacuum-tables/sg-vacuum-table-series/
+
+
+
 
 
 
@@ -20,6 +23,16 @@ Optimize travel speed and frequency for 60ns pulse .06mm line spacing and 19.6% 
 
 Optimize travel speed and frequency for 45ns pulse .06mm line spacing and 19.6% power.
 ![Frequency vs Speed .06mm  45ns  19.6pct power](freq_vs_speed_0.06mm_45ns_19.6pct.jpg)
+
+
+This electron microscope view of a series of .06mm spaced lines shows the start point and heat affected zone from overlapping lines.
+![SEM wide angle](SEM_wide.jpg)
+
+A close view with the electron microscope shows the pattern created by the laser pulses with 1 micron spacing.  The pattern has almost no surface height variation, rather it seems to be an oxide layer that provides enough index change to make the grating function.
+![SEM narrow](SEM_narrow.jpg)
+
+
+
 
 
 ![JPT M7 specs](JPT_m7_laser_specs.jpg)
