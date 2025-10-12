@@ -1,10 +1,14 @@
 # MOPA_Laser_Diffraction_Gratings
 Machine settings, photos of material test swatches, and code to generate diffraction patterns on stainless steel with a MOPA fiber laser
 
+![Animated GIF of patterns](diffraction_animation.gif)
+
+
+
 I used a Cloudray GM100 MOPA laser engraver with 290mm focal length F-theta lens :  https://www.cloudraylaser.com/products/cloudray-gm-100-litemarker-100w-fiber-laser-marking-engraver-with-4-3-x-4-3-scan-area?variant=43545779830945
 ![GM100](GM100.png)
 
-
+All substrates are polished stainless steel. .048"  (1.2mm) is great because it doesn't warp much at all.  .036" (0.9mm) is acceptable, but thinner metal has a lot of problems with warping.   https://www.mcmaster.com/9785K12/   https://www.mcmaster.com/9785K13/   
 
 
 
