@@ -11,6 +11,15 @@ The easiest way to get started making your own designs in [Lightburn](https://li
 All substrates are polished stainless steel. .048"  (1.2mm) is great because it doesn't warp much.  .036" (0.9mm) is acceptable, but thinner metal has a lot of problems with warping.   https://www.mcmaster.com/9785K12/   https://www.mcmaster.com/9785K13/     I used a vacuum chuck to hold the sheet metal flat while engraving:  https://www.ebay.com/itm/276754053418  https://www.clampusystems.com/product-category/vacuum-tables/sg-vacuum-table-series/
 
 
+Folders in this repo:
+grayscale_to_svg:  Input a grayscale image where each pixel value will be translated to a diffraction grating angle.  0=0* 127=90* 255 = 180*     These angles will be saved to an svg, with "pixels" that are filled with lines at the specified angle.  The line spacing and pixel size are adjustable.  The overall effect is to make a brilliant colorful image that shimmers as the lighting angle is changed.
+
+
+color_image_to_svg:  Input a color image, and map the colors to grating spacing, such that a correct color image will be produced at one particular lighting and viewing angle.  This script also accepts a correction gradient to account for changes in viewing angle from the top to the bottom of the image.  To use this, first run color_to_grating_pitch.  Then run angle_and_pitch_to_svg
+
+depthmap_to_parallax:  Input a grayscale image, where each pixel value represents its distance from the surface of the "hologram".  0 = far in the distance   127 = at the hologram plane   254 = far in front of the hologram.  255 = don't process.  Following this, use the grayscale_to_svg script.
+
+hologram_experiments:  Several scripts to raytrace a scene, and attempt to make a Benton (rainbow) hologram computationally.  Work in progress.
 
 
 
