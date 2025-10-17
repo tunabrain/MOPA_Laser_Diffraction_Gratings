@@ -1,6 +1,8 @@
 # MOPA_Laser_Diffraction_Gratings
 Machine settings, photos of material test swatches, and code to generate diffraction patterns on stainless steel with a MOPA fiber laser.  By moving the laser spot at 300mm/s, and pulsing at 300KHz, it is possible to make a diffractive pattern with 1 micron pitch on stainless steel sheets.  The grating direction is formed perpendicularly to the direction of laser travel.
 
+YouTube video for this project:  https://www.youtube.com/watch?v=RsGHr7dXLuI
+
 ![Animated GIF of patterns](diffraction_animation.gif)
 
 I used a Cloudray GM100 MOPA laser engraver with 290mm focal length F-theta lens :  https://www.cloudraylaser.com/products/cloudray-gm-100-litemarker-100w-fiber-laser-marking-engraver-with-4-3-x-4-3-scan-area?variant=43545779830945
@@ -22,6 +24,13 @@ All substrates are polished stainless steel. .048"  (1.2mm) is great because it 
 
 **hologram_experiments:**  Several scripts to raytrace a scene, and attempt to make a Benton (rainbow) hologram computationally.  Work in progress.
 
+
+
+Lightburn files with patches of parallel lines to make pixelated diffraction images:
+
+https://drive.google.com/file/d/12zHf-Y7TlfyD0MUzwDPh6k9y4zcxdrhg/view?usp=drive_link
+
+https://drive.google.com/file/d/146ngKSXb3AZLVU5jt7WBSEDFGEuxd7dS/view?usp=drive_link
 
 
 
