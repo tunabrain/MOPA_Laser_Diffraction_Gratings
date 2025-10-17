@@ -61,7 +61,7 @@ def create_svg_from_image(input_image_path, output_svg_path, patch_size=10, line
 
     # Start the SVG file content, now with millimeters as the unit
     svg_file = open(output_svg_path, "w")
-    svg_file.write(f"""<svg width="{svg_width}mm" height="{svg_height}mm" xmlns="http://www.w3.org/2000/svg">""")
+    svg_file.write(f"""<svg viewBox="0 0 {svg_width} {svg_height}" width="{svg_width}mm" height="{svg_height}mm" xmlns="http://www.w3.org/2000/svg">""")
 
     # Loop through each pixel of the input image
     for y in range(height):
