@@ -60,7 +60,8 @@ def create_svg_from_image(input_image_path, output_svg_path, patch_size=10, line
     svg_height = height * patch_size
 
     # Start the SVG file content, now with millimeters as the unit
-    svg_content = f"""<svg width="{svg_width}mm" height="{svg_height}mm" xmlns="http://www.w3.org/2000/svg">"""
+    svg_file = open(output_svg_path, "w")
+    svg_file.write(f"""<svg width="{svg_width}mm" height="{svg_height}mm" xmlns="http://www.w3.org/2000/svg">""")
 
     # Loop through each pixel of the input image
     for y in range(height):
@@ -88,9 +89,9 @@ def create_svg_from_image(input_image_path, output_svg_path, patch_size=10, line
 
             # Start a group for the current patch to apply transformations
             # Only use a translation transform to position the patch
-            svg_content += f"""
+            svg_file.write(f"""
     <g transform="translate({patch_x}, {patch_y})">
-"""
+""")
             
             # Geometry setup for line calculation
             rad_angle = math.radians(angle)
@@ -151,23 +152,20 @@ def create_svg_from_image(input_image_path, output_svg_path, patch_size=10, line
                     # Output the line segment. The coordinates are translated from the
                     # centered system (-half_size to +half_size) to the SVG group's
                     # local system (0 to patch_size) by adding half_size.
-                    svg_content += f"""
+                    svg_file.write(f"""
         <line x1="{p1[0] + half_size}" y1="{p1[1] + half_size}" x2="{p2[0] + half_size}" y2="{p2[1] + half_size}" 
               stroke="{stroke_color}" stroke-width="0.01" />
-"""
+""")
                 i += line_spacing
             
             # Close the group for the current patch
-            svg_content += """
+            svg_file.write("""
     </g>
-"""
-    
-    # Close the SVG file content
-    svg_content += "</svg>"
+""")
 
-    # Save the SVG file
-    with open(output_svg_path, "w") as svg_file:
-        svg_file.write(svg_content)
+    # Close the SVG file content
+    svg_file.write("</svg>")
+    svg_file.close()
     
     print(f"Successfully generated SVG file: {output_svg_path}")
 
